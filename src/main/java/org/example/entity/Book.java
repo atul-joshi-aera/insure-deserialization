@@ -20,6 +20,7 @@ public class Book implements Serializable {
         return new Book(author, isbn, title);
     }
 
+    //custom deserlization
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
         System.out.println("Triggering custom Deserialization Behaviour !!");
